@@ -29,7 +29,9 @@ const images = [
 // const imageEl = document.createElement("img");
 // imageEl.url = "";
 const element = images.map(
-  (img) => `<li><img src="${img.url}" alt="${img.alt}"/><li/>`
+  (img) =>
+    `<li><img src="${img.url}" alt="${img.alt}" width="20" height="20"/><li/>`
 );
+element.length = 3;
 const galleryList = document.querySelector(".gallery");
 galleryList.insertAdjacentHTML("beforeend", element);
