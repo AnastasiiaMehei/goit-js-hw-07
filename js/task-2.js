@@ -25,9 +25,6 @@ const images = [
   },
 ];
 
-// const elements = document.querySelector("img-styles");
-// const imageEl = document.createElement("img");
-// imageEl.url = "";
 const element = images.map(
   (img) =>
     `<li><img src="${img.url}" alt="${img.alt}" width="20" height="20"/><li/>`
