@@ -25,10 +25,12 @@ const images = [
   },
 ];
 
-const element = images.map(
-  (img) =>
-    `<li><img src="${img.url}" alt="${img.alt}" width="20" height="20"/><li/>`
+const galleryList = document.querySelector("ul.gallery");
+const galleryMarkup = images.map(
+  (image) =>
+    ` <li>
+    <img src="${image.url}" alt="${image.alt}" />
+  </li>`
 );
-element.length = 3;
-const galleryList = document.querySelector(".gallery");
-galleryList.insertAdjacentHTML("beforeend", element);
+galleryMarkup.length = 3;
+galleryList.insertAdjacentHTML("beforeend", galleryMarkup.join(""));

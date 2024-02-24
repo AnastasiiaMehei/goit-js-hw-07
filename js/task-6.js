@@ -3,6 +3,7 @@ const buttonCreate = document.querySelector("button[data-create]");
 buttonCreate.addEventListener("click", createBoxes);
 const divBoxes = document.querySelector("#boxes");
 function createBoxes() {
+  destroyBoxes();
   if (input.value >= 1 && input.value <= 100) {
     for (let i = 0; i < input.value; i++) {
       const newBox = document.createElement("div");
